@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Sleep Logger
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<!--<ion-tabs>
+  	<ion-tab tab="home">-->
+
+	<ion-item>
+  		<ion-label>When did you go to bed?</ion-label>
+  	</ion-item>
+  	
+  	<ion-item>
+		<ion-label>MMM D YYYY H:mm</ion-label>
+  		<ion-datetime [(ngModel)] = "inputSleepStart" displayFormat="MMM D YYYY H:mm" placeholder="Select Date&Time" (ngModelChange) = "sleepStartChanged()"></ion-datetime>
+  	</ion-item>
+	<!--
+	<ion-item>
+  		<ion-label>MM DD YY</ion-label>
+  		<ion-datetime [(ngModel)] = "sleepStart" displayFormat="MM DD YY" placeholder="Select Date" (ngModelChange) = "sleepStartChanged()"></ion-datetime>
+	</ion-item>
+	<ion-item>
+  		<ion-label>HH:mm</ion-label>
+  		<ion-datetime displayFormat="HH:mm" placeholder="Select Time"></ion-datetime>
+	</ion-item>
+	-->
+
+	<ion-item>
+  		<ion-label>When did you wake up?</ion-label>
+  	</ion-item>
+
+  	<ion-item>
+		<ion-label>MMM D YYYY H:mm</ion-label>
+  		<ion-datetime [(ngModel)]="inputSleepEnd" displayFormat="MMM D YYYY H:mm" placeholder="Select Date&Time" (ngModelChange) = "sleepEndChanged()"></ion-datetime>
+  	</ion-item>
+
+  	<ion-item>
+  		<ion-button (click)="addNewSleepTime()">Log Time</ion-button>
+  	</ion-item>
+
+  	<ion-item>
+  		<ion-label>How sleepy do you feel right now?</ion-label>
+  	</ion-item>
+
+  	<ion-item>
+  		<ion-label>MM DD YY</ion-label>
+  		<ion-datetime [(ngModel)]="inputSleepyTime" displayFormat="MM DD YY" placeholder = "Select Date" (ngModelChange)="sleepyTimeChanged()"></ion-datetime>
+  	</ion-item>
+  	<ion-item>
+  		<ion-range [(ngModel)]="sleepiness" min="1" max="7" step="1" pin="true" snaps="true" (ngModelChange)="sleepinessChanged()">
+  			<ion-label slot="end">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{sleepiness}}</ion-label>
+  		</ion-range>
+  		<ion-button (click)="addNewSleepiness()">Log Sleepiness</ion-button>
+  	</ion-item>
+
+  	<!--</ion-tab>
+
+  	<ion-tab tab="view log">-->
+  		<!--
+  		<ion-list *ngFor="let sleepData of allSleepData; index as i; first as isFirst; last as isLast">
+  			<ion-item>
+  			
+  			<ion-item>
+  				<ion-card-subtitle>Log {{i+1}}</ion-card-subtitle>
+  			</ion-item>
+
+  			<ion-item>
+  				{{sleepData.dateString()}}
+  			</ion-item>
+
+  			<ion-item>
+  				{{sleepData.summaryString()}}
+  			</ion-item>
+  			</ion-item>
+
+  		</ion-list>
+  		-->
+  	
+  		<ion-slides style="background: white" id="slides" pager>
+        <ion-slide *ngFor="let sleepData of allSleepData; index as i; first as isFirst; last as isLast" style="background: red; color: white;">
+          	<ion-item>
+  			
+  			
+  				<ion-card-subtitle>Log {{i+1}}</ion-card-subtitle>
+  			
+
+  				
+  				<ion-card-content>{{sleepData.dateString()}}</ion-card-content>
+  			
+
+  			
+  				{{sleepData.summaryString()}}
+  			
+
+  			
+  				<ion-button color="danger" (click)="singleDeleteAlert(sleepData.id)">Delete Log {{i+1}}</ion-button>
+  			
+
+  			</ion-item>
+
+  		</ion-slide>
+      	</ion-slides>
+      	<ion-label *ngIf="dataArrayFilled">
+  			<-Swipe to Left or Right (After Logging)->
+  		</ion-label>
+  	
+  		<ion-item class="center">
+  			<ion-button color="danger" (click)="presentAlert()">Clear My Log</ion-button>
+  		</ion-item>
+  	
+  	<!--</ion-tab>
+
+  	<ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="home">
+      <ion-label>Home</ion-label>
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="view log">
+      <ion-label>My Log</ion-label>
+      <ion-icon name="filing"></ion-icon>
+    </ion-tab-button>
+
+  	</ion-tab-bar>
+</ion-tabs>-->
+
+</ion-content>

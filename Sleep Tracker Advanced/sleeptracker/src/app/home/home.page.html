@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Sleep Logger
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullsreen>
+
+	<ion-card>
+		<ion-card-header>
+			<ion-card-subtitle>Overnight Sleep</ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+			<b>When did you sleep?</b><br>
+			<ion-label>Month Day Year Hr Min AM/PM</ion-label>
+			<ion-datetime displayFormat="MMM DD YY h:mm A" placeholder=" ->Pick Date and Time" [(ngModel)] = "overnightSleepInput" (ngModelChange) = "overnightSleepMod()"></ion-datetime>
+		</ion-card-content>
+		<ion-card-content>
+			<b>When did you get up?</b><br>
+			<ion-label>Month Day Year Hr Min AM/PM</ion-label>
+			<ion-datetime displayFormat="MMM DD YY h:mm A" placeholder="->Pick Date and Time" [(ngModel)]="overnightWakeInput" (ngModeChange)="overnightWakeMod()"></ion-datetime>
+		</ion-card-content>
+		<ion-card-content>
+			<ion-button shape="round" (click)="logOvernightSleep()">Save Overnight Sleep</ion-button>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card>
+		<ion-card-header>
+			<ion-card-subtitle>Stanford Sleepiness</ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+			<b>How sleepy are you?(as of now)</b><br>
+			<ion-label>Month      Day      Year</ion-label>
+			<ion-datetime displayFormat="MMM DD YYYY" placeholder="->Pick Date" [(ngModel)]="stanfordDateInput" (ngModelChange)="stanfordDateMod()"></ion-datetime><br>
+			<ion-range snaps="true" min="1" max="7" [(ngModel)]="stanfordMeasure" (ngModelChange)="stanfordMeasureMod()">
+				<ion-label slot="start">{{stanfordMeasure}}&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>
+			</ion-range><br>
+			<ion-button shape="round" (click)="logStanfordSleepiness()">Save Stanford Measure</ion-button>
+		</ion-card-content>
+
+	</ion-card>
+
+	<ion-card *ngIf="showLog==false">
+		<ion-card-content>
+		<ion-button shape="round" (click)="changeShowStatus()">Show Log</ion-button>
+		<ion-button shape="round" color="danger" (click)="confirmReset()">Reset My Sleep Log</ion-button>
+		</ion-card-content>
+	</ion-card>
+	
+	<ion-card *ngIf="showLog==true">
+		<ion-card-content>
+		<ion-button shape="round" (click)="changeShowStatus()">Hide Log</ion-button>
+		<ion-button shape="round" color="danger" (click)="confirmReset()">Reset My Sleep Log</ion-button>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card *ngIf="showLog">
+		<ion-card-header>
+			<ion-card-subtitle>My Sleep Log</ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content *ngFor="let data of allSleepData; index as i">
+			Sleep Log {{i+1}}<br>
+			{{data.dateString()}}<br>
+			{{data.summaryString()}}<br><br>
+		</ion-card-content>
+	</ion-card>
+
+
+
+<!--
+<ion-tab-bar slot="buttom">
+	<ion-tab-button tab="Homepage">
+		<ion-label>Home Page</ion-label>
+		<ion-icon name="home"></ion-icon>
+	</ion-tab-button>
+
+	<ion-tab-button tab="LogView">
+		<ion-label>My Sleep Log</ion-label>
+		<ion-icon name="filing"></ion-icon>
+	</ion-tab-button>
+</ion-tab-bar>
+-->
+	
+  
+</ion-content>

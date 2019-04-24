@@ -1,0 +1,38 @@
+.pic {
+	opacity: 1;
+  	transition: .5s ease;
+  	backface-visibility: hidden;
+  	display: inline-block;
+  	margin-top: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.row {
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.caption {
+	text-align: center;
+	color: white;
+}
+
+.centerframe {
+	transition: .5s ease;
+  	opacity: 1;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	-ms-transform: translate(-50%, -50%);
+}
+
+.thumbnail:hover .pic {
+	opacity: 0.5;
+}
+
+.thumbnail:hover .ceterframe {
+	opacity: 1;
+}

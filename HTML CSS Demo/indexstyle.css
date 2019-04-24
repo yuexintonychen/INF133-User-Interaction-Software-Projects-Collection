@@ -1,0 +1,114 @@
+/*@media screen and (min-width: 490px){
+.navbar {
+	background-color: black;
+    overflow: hidden;
+    text-align: center;
+    border-width:1px 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+}
+
+@media screen and (min-width: 660px){
+.navbar {
+	background-color: black;
+    overflow: hidden;
+    text-align: center;
+    border-width:1px 0;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+}
+
+@media screen and (min-width: 1000px){
+.navbar {
+	background-color: black;
+    overflow: hidden;
+    text-align: center;
+    border-width:1px 0;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+}
+
+.navbar {
+	background-color: black;
+    overflow: hidden;
+    text-align: center;
+    border-width:1px 0;
+    vertical-align: middle;
+}*/
+
+.navbar nav {
+	display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    min-width: 90px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+
+}
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+/*
+.navbar li.active {
+	background-color: silver;
+    color: white;
+}
+
+.navbar nav.others {
+	border:1px solid white;
+	background-color: gray;
+    color: white;
+}*/
+
+.performance, .processor, .graphics,
+.t2chip, .ssd, .thunderbolt, .touchbar, 
+.touchid, .da, .kt{
+	margin-left: 75px;
+	margin-right: 75px;
+	/*text-indent: 30px;*/
+	font-size: 105%;
+	color: white;
+	text-align: center;
+}
+
+h1, h2, h3 {
+	text-align: center;
+	color: white;
+}
+
+body {
+	background-color: silver;
+	background: url("https://cdn1.tekrevue.com/wp-content/uploads/2018/06/ios12-wallpaper-16x9.jpg") no-repeat center center;   
+	background-size: cover;
+	background-position: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+video {
+	width: 100%;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.transparent {
+	opacity: 0.9;
+}
