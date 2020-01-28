@@ -92,7 +92,7 @@ h1, h2, h3 {
 
 body {
 	background-color: silver;
-	background: url("https://cdn1.tekrevue.com/wp-content/uploads/2018/06/ios12-wallpaper-16x9.jpg") no-repeat center center;   
+	background: url("./imgs/bg_image.jpg") no-repeat center center;   
 	background-size: cover;
 	background-position: center;
     margin-top: 1%;
