@@ -2,13 +2,13 @@
 
 This is a lightweight Angular-based Spotify music browser
 
-![Demo Screenshot 1](Demo 1.png)
+![Demo Screenshot 1](Demo%201.png)
 
-![Demo Screenshot 2](Demo 2.png)
+![Demo Screenshot 2](Demo%202.png)
 
-![Demo Screenshot 3](Demo 3.png)
+![Demo Screenshot 3](Demo%203.png)
 
-![Demo Screenshot 4](Demo 4.png)
+![Demo Screenshot 4](Demo%204.png)
 
 ## Project Setup Tutorial
 
