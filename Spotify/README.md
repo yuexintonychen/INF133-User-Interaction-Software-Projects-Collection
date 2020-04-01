@@ -1,6 +1,6 @@
 # The Spotify Music Browser
 
-This is a lightweight Angular-based Spotify music browser
+This is a lightweight Angular-based Spotify music browser that allows you to log in with your Spotify account, browse artists, genres, albums, songs and play music in Spotify web player with a single click.
 
 ![Demo Screenshot 1](Demo%201.png)
 
@@ -12,7 +12,7 @@ This is a lightweight Angular-based Spotify music browser
 
 ## Project Setup Tutorial
 
-1. A Spotify Developer account is required to for the Express webserver to connect with Spotify API. Create a Spotify account or log in at 
+1. A Spotify Developer account is required to for the back-end Express webserver to connect with Spotify API. Create a Spotify account or log in at 
 https://developer.spotify.com/dashboard/ and follow the instructions to create a client id. Name the app whatever you'd like
 and enter the app description accordingly. 
 
