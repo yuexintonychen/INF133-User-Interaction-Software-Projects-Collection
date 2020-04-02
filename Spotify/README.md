@@ -12,7 +12,7 @@ This is a lightweight Angular-based Spotify music browser that allows you to log
 
 ## Project Setup Tutorial
 
-1. A Spotify Developer account is required to for the back-end Express webserver to connect with Spotify API. Create a Spotify account or log in at 
+1. A Spotify Developer account is required for the back-end Express webserver to connect with Spotify API. Create a Spotify account or log in at 
 https://developer.spotify.com/dashboard/ and follow the instructions to create a client id. Name the app whatever you'd like
 and enter the app description accordingly. 
 
