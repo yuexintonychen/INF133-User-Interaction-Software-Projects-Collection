@@ -14,9 +14,9 @@ This is a lightweight Angular-based Spotify music browser that allows you to log
 
 1. A Spotify Developer account is required for the back-end Express webserver to connect with Spotify API. Create a Spotify account or log in at 
 https://developer.spotify.com/dashboard/ and follow the instructions to create a client id. Name the app whatever you'd like
-and enter the app description accordingly. 
+and enter the app description accordingly. Once you have created your application, be sure to set the redirect URI to http://localhost:8888/callback.
 
-2. Create the client_secret.json file in the webserver folder with the following data:
+2. Once you get your client key and client secret, create the client_secret.json file in the webserver folder with the following data:
 {
  "client_id": "Your Client Key",
  "client_secret": "Your Client Secret"
