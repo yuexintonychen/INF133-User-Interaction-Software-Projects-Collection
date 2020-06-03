@@ -1,6 +1,8 @@
 # The Spotify Music Browser
 
-This is a lightweight Angular-based Spotify music browser that allows you to log in with your Spotify account, browse artists, genres, albums, songs and play music in Spotify web player with a single click.
+A lightweight Angular-based Spotify music browser that allows you to log in with your Spotify account, browse artists, genres, albums, songs and play music in Spotify web player with a single click
+
+•	Implemented with Angular/TypeScript, Express.js, HTTP request and OAuth (Spotify API)
 
 ![Demo Screenshot 1](Demo%201.png)
 
